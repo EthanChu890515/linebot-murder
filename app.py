@@ -27,7 +27,7 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是女傭'
-                        ),
+                        )
                        
                     ]
                 ),
@@ -42,10 +42,11 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是AI機器人'
-                        ),
-                       
+                        )
                     ]
                 ),
+                       
+                    
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%BB%9A%E5%B8%AB.png?raw=true',
                     title='廚師',
@@ -57,10 +58,10 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是廚師'
+                             )
+                    ]
                         ),
                         
-                    ]
-                ),
                 # 其餘角色...
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%86%AB%E7%94%9F.png?raw=true',
@@ -73,10 +74,11 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是醫生'
+                             )
+                    ]
                         ),
                       
-                    ]
-                ),
+                 
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%9C%92%E4%B8%81.png?raw=true',
                     title='園丁',
@@ -88,6 +90,8 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是園丁'
+                             )
+                    ]
                         ),
                         CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%8B%BC%E7%90%B4%E5%AE%B6.png?raw=true',
@@ -100,6 +104,8 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是鋼琴家'
+                             )
+                    ]
                         ),
                         CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%87%BA%E7%89%88%E7%A4%BE%E8%80%81%E9%97%86.png?raw=true',
@@ -112,6 +118,8 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是出版社老闆'
+                             )
+                    ]
                         ),
                         CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E7%AE%A1%E5%AE%B6.png?raw=true',
@@ -124,7 +132,7 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是管家'
-                        ),
+                        )
                        
                     ]
                 ),
