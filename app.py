@@ -164,7 +164,7 @@ def handle_postback(event):
 @handler.add(FollowEvent)
 def handle_follow(event):
     app.logger.info("User followed the bot.")
-    welcome_message = TextSendMessage(text="歡迎加入！這是一個偵探遊戲，選擇誰是兇手來過關！")
+    welcome_message = TextSendMessage(text="歡迎加入！這是一個回報器，請選擇你認為的兇手！")
     carousel_message = Carousel_Template()
     
     # 發送歡迎訊息和旋轉木馬訊息
