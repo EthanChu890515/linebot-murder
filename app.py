@@ -16,7 +16,6 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%A5%B3%E5%82%AD.png?raw=true',
                     title='女傭',
-                    text='一個模板可以有三個按鈕',
                     actions=[
                         PostbackTemplateAction(
                             label='她是兇手',
@@ -35,7 +34,6 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/AI%E6%A9%9F%E5%99%A8%E4%BA%BA.png?raw=true',
                     title='AI機器人',
-                    text='副標題可以自己改',
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
@@ -54,7 +52,6 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%BB%9A%E5%B8%AB.png?raw=true',
                     title='廚師',
-                    text='最多可以放十個',
                     actions=[
                         PostbackTemplateAction(
                             label='他是兇手',
@@ -69,7 +66,98 @@ def Carousel_Template():
                             uri='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Number_3_in_yellow_rounded_square.svg/200px-Number_3_in_yellow_rounded_square.svg.png'
                         )
                     ]
-                )
+                ),
+                 CarouselColumn(
+                    thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%9C%92%E4%B8%81.png?raw=true',
+                    title='園丁',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='它是兇手',
+                            data='這是ID=2'
+                        ),
+                        MessageTemplateAction(
+                            label='用戶發送訊息',
+                            text='我知道這是2'
+                        ),
+                        URITemplateAction(
+                            label='進入2的網頁',
+                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Number_2_in_light_blue_rounded_square.svg/200px-Number_2_in_light_blue_rounded_square.svg.png'
+                        )
+                    ]
+                ),
+                 
+                 CarouselColumn(
+                    thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E7%AE%A1%E5%AE%B6.png?raw=true',
+                    title='管家',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='它是兇手',
+                            data='這是ID=2'
+                        ),
+                        MessageTemplateAction(
+                            label='用戶發送訊息',
+                            text='我知道這是2'
+                        ),
+                        URITemplateAction(
+                            label='進入2的網頁',
+                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Number_2_in_light_blue_rounded_square.svg/200px-Number_2_in_light_blue_rounded_square.svg.png'
+                        )
+                    ]
+                ),
+                 CarouselColumn(
+                    thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%86%AB%E7%94%9F.png?raw=true',
+                    title='醫生',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='它是兇手',
+                            data='這是ID=2'
+                        ),
+                        MessageTemplateAction(
+                            label='用戶發送訊息',
+                            text='我知道這是2'
+                        ),
+                        URITemplateAction(
+                            label='進入2的網頁',
+                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Number_2_in_light_blue_rounded_square.svg/200px-Number_2_in_light_blue_rounded_square.svg.png'
+                        )
+                    ]
+                ),
+                 CarouselColumn(
+                    thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%8B%BC%E7%90%B4%E5%AE%B6.png?raw=true',
+                    title='鋼琴家',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='它是兇手',
+                            data='這是ID=2'
+                        ),
+                        MessageTemplateAction(
+                            label='用戶發送訊息',
+                            text='我知道這是2'
+                        ),
+                        URITemplateAction(
+                            label='進入2的網頁',
+                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Number_2_in_light_blue_rounded_square.svg/200px-Number_2_in_light_blue_rounded_square.svg.png'
+                        )
+                    ]
+                ),
+                 CarouselColumn(
+                    thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%87%BA%E7%89%88%E7%A4%BE%E8%80%81%E9%97%86.png?raw=true',
+                    title='出版社老闆',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='它是兇手',
+                            data='這是ID=2'
+                        ),
+                        MessageTemplateAction(
+                            label='用戶發送訊息',
+                            text='我知道這是2'
+                        ),
+                        URITemplateAction(
+                            label='進入2的網頁',
+                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Number_2_in_light_blue_rounded_square.svg/200px-Number_2_in_light_blue_rounded_square.svg.png'
+                        )
+                    ]
+                ),
             ]
         )
     )
