@@ -33,7 +33,7 @@ def Carousel_Template():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuo7n2_HNSFuT3T7Z9PUZmn1SDM6G6-iXfRC3FxdGTj7X1Wr0RzA',
+                    thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/AI%E6%A9%9F%E5%99%A8%E4%BA%BA.png?raw=true',
                     title='AI機器人',
                     text='副標題可以自己改',
                     actions=[
