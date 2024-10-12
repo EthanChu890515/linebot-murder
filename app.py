@@ -6,8 +6,8 @@ from linebot.models import *
 app = Flask(__name__)
 
 # Line API Token and Secret
-line_bot_api = LineBotApi('CHANNEL_ACCESS_TOKEN')  # 請替換為你的 CHANNEL_ACCESS_TOKEN
-handler = WebhookHandler('CHANNEL_SECRET')  # 請替換為你的 CHANNEL_SECRET
+line_bot_api = LineBotApi(os.getenv('CHANNEL_ACCESS_TOKEN'))
+handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
 
 # TemplateSendMessage - ImageCarouselTemplate (旋轉木馬按鈕訊息介面)
 def Carousel_Template():
