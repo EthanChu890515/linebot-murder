@@ -136,16 +136,16 @@ def Carousel_Template():
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
-
     body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body)
+    app.logger.info("Request body: " + body)  # 日誌請求內容
 
     try:
-        handler.handle(body, signature)
+        handler.handle(body, signature)  # 處理請求
     except InvalidSignatureError:
-        abort(400)
+        abort(400)  # 錯誤的簽名，返回 400
 
-    return 'OK'
+    return 'OK'  # 正常情況返回 200
+
 
 # Handling postback event to check answer
 @handler.add(PostbackEvent)
