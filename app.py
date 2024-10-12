@@ -28,7 +28,6 @@ def Carousel_Template():
                             label='用戶發送訊息',
                             text='兇手是女傭'
                         )
-                       
                     ]
                 ),
                 CarouselColumn(
@@ -45,8 +44,6 @@ def Carousel_Template():
                         )
                     ]
                 ),
-                       
-                    
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%BB%9A%E5%B8%AB.png?raw=true',
                     title='廚師',
@@ -58,11 +55,9 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是廚師'
-                             )
+                        )
                     ]
-                        ),
-                        
-                # 其餘角色...
+                ),
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%86%AB%E7%94%9F.png?raw=true',
                     title='醫生',
@@ -74,11 +69,9 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是醫生'
-                             )
+                        )
                     ]
-                        ),
-                      
-                 
+                ),
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%9C%92%E4%B8%81.png?raw=true',
                     title='園丁',
@@ -90,10 +83,10 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是園丁'
-                             )
+                        )
                     ]
-                        ),
-                        CarouselColumn(
+                ),
+                CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%8B%BC%E7%90%B4%E5%AE%B6.png?raw=true',
                     title='鋼琴家',
                     actions=[
@@ -104,10 +97,10 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是鋼琴家'
-                             )
+                        )
                     ]
-                        ),
-                        CarouselColumn(
+                ),
+                CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%87%BA%E7%89%88%E7%A4%BE%E8%80%81%E9%97%86.png?raw=true',
                     title='出版社老闆',
                     actions=[
@@ -118,10 +111,10 @@ def Carousel_Template():
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='兇手是出版社老闆'
-                             )
+                        )
                     ]
-                        ),
-                        CarouselColumn(
+                ),
+                CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E7%AE%A1%E5%AE%B6.png?raw=true',
                     title='管家',
                     actions=[
@@ -133,10 +126,6 @@ def Carousel_Template():
                             label='用戶發送訊息',
                             text='兇手是管家'
                         )
-                       
-                    ]
-                ),
-                       
                     ]
                 )
             ]
@@ -171,7 +160,8 @@ def handle_postback(event):
         event.reply_token,
         TextSendMessage(text=reply_text)
     )
-                # Handling follow event when user adds bot as friend
+
+# Handling follow event when user adds bot as friend
 @handler.add(FollowEvent)
 def handle_follow(event):
     welcome_message = TextSendMessage(text="歡迎加入！這是一個偵探遊戲，選擇誰是兇手來過關！")
@@ -182,7 +172,6 @@ def handle_follow(event):
         event.reply_token,
         [welcome_message, carousel_message]
     )
-
 
 if __name__ == "__main__":
     app.run()
