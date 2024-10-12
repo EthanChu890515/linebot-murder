@@ -19,6 +19,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%A5%B3%E5%82%AD.png?raw=true',
                     title='女傭',
+                    text='這是女傭，請選擇她是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='她是兇手',
@@ -33,6 +34,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/AI%E6%A9%9F%E5%99%A8%E4%BA%BA.png?raw=true',
                     title='AI機器人',
+                    text='這是AI機器人，請選擇他是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
@@ -47,6 +49,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%BB%9A%E5%B8%AB.png?raw=true',
                     title='廚師',
+                    text='這是廚師，請選擇他是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='他是兇手',
@@ -61,6 +64,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%86%AB%E7%94%9F.png?raw=true',
                     title='醫生',
+                    text='這是醫生，請選擇他是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
@@ -75,6 +79,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%9C%92%E4%B8%81.png?raw=true',
                     title='園丁',
+                    text='這是園丁，請選擇他是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='他是兇手',
@@ -89,6 +94,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E9%8B%BC%E7%90%B4%E5%AE%B6.png?raw=true',
                     title='鋼琴家',
+                    text='這是鋼琴家，請選擇他是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
@@ -103,6 +109,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E5%87%BA%E7%89%88%E7%A4%BE%E8%80%81%E9%97%86.png?raw=true',
                     title='出版社老闆',
+                    text='這是出版社老闆，請選擇他是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
@@ -117,6 +124,7 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://github.com/EthanChu890515/linebot-murder/blob/main/%E7%AE%A1%E5%AE%B6.png?raw=true',
                     title='管家',
+                    text='這是管家，請選擇他是否是兇手。',
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
@@ -132,6 +140,7 @@ def Carousel_Template():
         )
     )
     return message
+
 
 # Flask webhook callback route
 @app.route("/callback", methods=['POST'])
