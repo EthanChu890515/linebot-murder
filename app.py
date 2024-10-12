@@ -148,31 +148,35 @@ def callback():
     return 'OK'  # 正常情況返回 200
 
 
-# Handling postback event to check answer
 @handler.add(PostbackEvent)
 def handle_postback(event):
+    app.logger.info(f"Postback event received with reply token: {event.reply_token}")
     if event.postback.data == 'correct':
         reply_text = "答案正確，恭喜過關！"
     else:
         reply_text = "答案錯誤，失敗！"
     
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=reply_text)
-    )
+    try:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=reply_text)
+        )
+    except Exception as e:
+        app.logger.error(f"Error replying message: {e}")
 
-# Handling follow event when user adds bot as friend
 @handler.add(FollowEvent)
 def handle_follow(event):
     app.logger.info("User followed the bot.")
     welcome_message = TextSendMessage(text="歡迎加入！這是一個回報器，請選擇你認為的兇手！")
     carousel_message = Carousel_Template()
     
-    # 發送歡迎訊息和旋轉木馬訊息
-    line_bot_api.reply_message(
-        event.reply_token,
-        [welcome_message, carousel_message]
-    )
+    try:
+        line_bot_api.reply_message(
+            event.reply_token,
+            [welcome_message, carousel_message]
+        )
+    except Exception as e:
+        app.logger.error(f"Error replying message: {e}")
 
 if __name__ == "__main__":
     app.run(debug=True)
