@@ -2,13 +2,12 @@ from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import *
-import os
 
 app = Flask(__name__)
 
 # Line API Token and Secret
-line_bot_api = LineBotApi('CHANNEL_ACCESS_TOKEN')
-handler = WebhookHandler('CHANNEL_SECRET')
+line_bot_api = LineBotApi('CHANNEL_ACCESS_TOKEN')  # 請替換為你的 CHANNEL_ACCESS_TOKEN
+handler = WebhookHandler('CHANNEL_SECRET')  # 請替換為你的 CHANNEL_SECRET
 
 # TemplateSendMessage - ImageCarouselTemplate (旋轉木馬按鈕訊息介面)
 def Carousel_Template():
@@ -92,7 +91,7 @@ def Carousel_Template():
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
-                            data='wrong'  # 醫生為錯誤答案
+                            data='wrong'  # 鋼琴家為錯誤答案
                         ),
                         MessageTemplateAction(
                             label='用戶發送訊息',
@@ -106,7 +105,7 @@ def Carousel_Template():
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
-                            data='wrong'  # 醫生為錯誤答案
+                            data='wrong'  # 出版社老闆為錯誤答案
                         ),
                         MessageTemplateAction(
                             label='用戶發送訊息',
@@ -120,7 +119,7 @@ def Carousel_Template():
                     actions=[
                         PostbackTemplateAction(
                             label='它是兇手',
-                            data='wrong'  # 醫生為錯誤答案
+                            data='wrong'  # 管家為錯誤答案
                         ),
                         MessageTemplateAction(
                             label='用戶發送訊息',
@@ -175,4 +174,5 @@ def handle_follow(event):
     )
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
