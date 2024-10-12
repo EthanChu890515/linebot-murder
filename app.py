@@ -164,6 +164,7 @@ def handle_postback(event):
 # Handling follow event when user adds bot as friend
 @handler.add(FollowEvent)
 def handle_follow(event):
+    app.logger.info("User followed the bot.")
     welcome_message = TextSendMessage(text="歡迎加入！這是一個偵探遊戲，選擇誰是兇手來過關！")
     carousel_message = Carousel_Template()
     
